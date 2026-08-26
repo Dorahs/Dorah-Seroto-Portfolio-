@@ -1,208 +1,154 @@
-import { createFileRoute } from "@tanstack/react-router";
-import cvAsset from "@/assets/cv.docx.asset.json";
-import certAsset from "@/assets/certificate.pdf.asset.json";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight, Award, CodeXml, Database, GraduationCap, Terminal, Wrench } from "lucide-react";
+import portrait from "@/assets/portrait.jpg.asset.json";
+import { SectionCard } from "@/components/SectionCard";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Dorah Seroto — Software Developer Portfolio" },
+      { title: "Dorah Seroto — Python & Software Developer" },
       {
         name: "description",
         content:
-          "Portfolio of Dorah Motsatsi Seroto, a software developer in Limpopo, South Africa working with Python, JavaScript and React.",
+          "Portfolio of Dorah Seroto, a Python and software developer building clean, reliable, and scalable applications.",
       },
-      { property: "og:title", content: "Dorah Seroto — Software Developer Portfolio" },
+      { property: "og:title", content: "Dorah Seroto — Python & Software Developer" },
       {
         property: "og:description",
         content:
-          "Projects, skills, certifications and CV of Dorah Motsatsi Seroto, software developer (Python, JavaScript, React).",
+          "Portfolio of Dorah Seroto, a Python and software developer building clean, reliable, and scalable applications.",
       },
-      { property: "og:type", content: "profile" },
+      { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: Index,
+  component: Home,
 });
 
-const skills = [
-  { label: "Languages", items: "Python, JavaScript, HTML5, CSS3" },
-  { label: "Frameworks", items: "React, REST APIs, Responsive Web Development" },
-  { label: "Tools", items: "Git, GitHub, Visual Studio Code" },
+const cards = [
+  { to: "/about", title: "About me", description: "My background, summary and CV download.", Icon: CodeXml },
+  { to: "/skills", title: "Skills", description: "Python, JavaScript, TypeScript, React, Git and more.", Icon: Wrench },
   {
-    label: "Strengths",
-    items: "Front-end development, debugging, version control, responsive design",
+    to: "/education",
+    title: "Education",
+    description: "CPUT, WeThinkCode_, SheCodes and freeCodeCamp.",
+    Icon: GraduationCap,
+  },
+  {
+    to: "/certificates",
+    title: "Certificates",
+    description: "freeCodeCamp Responsive Web Design certification.",
+    Icon: Award,
   },
 ];
 
-const projects = [
+const pillars = [
+  { title: "Clean Code", description: "Readable, maintainable Python and software crafted with care.", Icon: CodeXml },
+  { title: "Data & APIs", description: "From RESTful APIs to data pipelines and backend services.", Icon: Database },
   {
-    name: "Weather App",
-    stack: "HTML · CSS · JavaScript",
-    points: [
-      "Responsive weather app that fetches real-time data by location or search input.",
-      "Dynamic UI updates with vanilla JavaScript and DOM manipulation.",
-    ],
-  },
-  {
-    name: "FoodHub — Food Ordering App",
-    stack: "React · JavaScript · CSS (in progress)",
-    points: [
-      "Component-based menu browsing, cart management and order flow.",
-      "Modern front-end practices including state management and responsive design.",
-    ],
-  },
-  {
-    name: "Personal Portfolio Website",
-    stack: "Built with Lovable",
-    points: [
-      "Showcases projects, skills and professional background.",
-      "Rapidly prototyped and deployed as a responsive, modern site.",
-    ],
+    title: "Problem Solver",
+    description: "Turning complex requirements into simple, working solutions.",
+    Icon: Terminal,
   },
 ];
 
-const certifications = [
-  { title: "freeCodeCamp — Responsive Web Design", meta: "Developer Certification, August 2026 (~300 hours)" },
-  { title: "WeThinkCode_ — GenAI Course for Software Engineers", meta: "Certificate of Completion, May 2026" },
-  { title: "SheCodes Foundation — Introduction to Coding", meta: "HTML, CSS, JavaScript and AI fundamentals, August 2026" },
-  { title: "FNB App Academy", meta: "Python and practical project (in progress)" },
-  { title: "freeCodeCamp — Additional Coursework", meta: "JavaScript, Python, Front-End Development Libraries" },
-];
-
-function Index() {
+function Home() {
   return (
-    <main className="min-h-screen bg-background text-foreground">
-      <section className="bg-hero px-6 py-20 sm:py-28">
-        <div className="mx-auto max-w-3xl">
-          <p className="text-sm uppercase tracking-[0.25em] text-primary">Software Developer</p>
-          <h1 className="mt-4 text-4xl leading-tight sm:text-6xl">Dorah Motsatsi Seroto</h1>
-          <p className="mt-5 text-base text-muted-foreground sm:text-lg">
-            Self-taught software developer skilled in Python, JavaScript, React, HTML and CSS, with
-            hands-on Git and GitHub experience. I build responsive, user-focused applications and
-            keep sharpening modern engineering skills.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href={cvAsset.url}
-              download
-              className="rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground shadow-soft transition-opacity hover:opacity-90"
-            >
-              Download CV
-            </a>
-            <a
-              href={certAsset.url}
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full border border-border px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
-            >
-              View certificate
-            </a>
-          </div>
-          <ul className="mt-8 flex flex-wrap gap-x-5 gap-y-2 text-sm text-muted-foreground">
-            <li>Limpopo, South Africa</li>
-            <li>
-              <a className="hover:text-primary" href="tel:+27769935134">076 993 5134</a>
-            </li>
-            <li>
-              <a className="hover:text-primary" href="mailto:dorahseroto2@gmail.com">
-                dorahseroto2@gmail.com
-              </a>
-            </li>
-            <li>
-              <a className="hover:text-primary" href="https://linkedin.com/in/dorah-c" target="_blank" rel="noreferrer">
-                LinkedIn
-              </a>
-            </li>
-            <li>
-              <a className="hover:text-primary" href="https://github.com/Dorahs" target="_blank" rel="noreferrer">
-                GitHub
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section className="px-6 py-16">
-        <div className="mx-auto max-w-3xl">
-          <h2 className="text-2xl sm:text-3xl">Technical skills</h2>
-          <dl className="mt-6 grid gap-4 sm:grid-cols-2">
-            {skills.map((s) => (
-              <div key={s.label} className="rounded-xl border border-border bg-card p-5">
-                <dt className="text-sm uppercase tracking-widest text-primary">{s.label}</dt>
-                <dd className="mt-2 text-sm text-card-foreground">{s.items}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-      </section>
-
-      <section className="px-6 pb-16">
-        <div className="mx-auto max-w-3xl">
-          <h2 className="text-2xl sm:text-3xl">Projects</h2>
-          <div className="mt-6 space-y-4">
-            {projects.map((p) => (
-              <article key={p.name} className="rounded-xl border border-border bg-card p-6 shadow-soft">
-                <h3 className="text-lg">{p.name}</h3>
-                <p className="mt-1 text-xs uppercase tracking-widest text-accent">{p.stack}</p>
-                <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-                  {p.points.map((pt) => (
-                    <li key={pt}>{pt}</li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
-          <p className="mt-5 text-sm text-muted-foreground">
-            More code on{" "}
-            <a className="text-primary hover:underline" href="https://github.com/Dorahs" target="_blank" rel="noreferrer">
-              github.com/Dorahs
-            </a>
-            .
-          </p>
-        </div>
-      </section>
-
-      <section className="px-6 pb-16">
-        <div className="mx-auto max-w-3xl">
-          <h2 className="text-2xl sm:text-3xl">Certifications &amp; education</h2>
-          <ul className="mt-6 space-y-4">
-            {certifications.map((c) => (
-              <li key={c.title} className="border-l-2 border-primary pl-4">
-                <p className="text-base">{c.title}</p>
-                <p className="text-sm text-muted-foreground">{c.meta}</p>
-              </li>
-            ))}
-            <li className="border-l-2 border-primary pl-4">
-              <p className="text-base">Cape Peninsula University of Technology</p>
-              <p className="text-sm text-muted-foreground">Chemical Engineering</p>
-            </li>
-          </ul>
-          <div className="mt-8 rounded-xl border border-border bg-card p-6">
-            <h3 className="text-lg">Documents</h3>
-            <div className="mt-4 flex flex-wrap gap-3">
-              <a
-                href={cvAsset.url}
-                download
-                className="rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+    <div className="flex flex-col">
+      <section className="relative overflow-hidden px-6 py-20 md:py-28">
+        <div className="pointer-events-none absolute inset-0 tech-grid" aria-hidden="true" />
+        <div
+          className="pointer-events-none absolute -top-32 left-1/2 h-80 w-[42rem] -translate-x-1/2 rounded-full bg-tech/15 blur-3xl"
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto grid w-full max-w-5xl items-center gap-10 md:grid-cols-[1.6fr_auto]">
+          <div>
+            <p className="inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-3 py-1 text-xs font-medium uppercase tracking-widest text-muted-foreground backdrop-blur">
+              <span className="h-1.5 w-1.5 rounded-full bg-tech-glow" />
+              Python &amp; Software Developer
+            </p>
+            <h1 className="mt-6 max-w-3xl text-4xl font-semibold leading-tight tracking-tight text-foreground md:text-5xl lg:text-6xl">
+              Building thoughtful software with Python.
+            </h1>
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+              I'm Dorah Seroto, a developer who loves turning ideas into clean, reliable code. I
+              specialize in Python backends, data workflows, and tools that just work.
+            </p>
+            <div className="mt-10 flex flex-wrap items-center gap-4">
+              <Link
+                to="/work"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-elevated transition-colors hover:bg-primary/90"
               >
-                CV (DOCX)
-              </a>
-              <a
-                href={certAsset.url}
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-full border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:bg-secondary"
+                View my work
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center rounded-full border border-border bg-background/70 px-6 py-3 text-sm font-medium text-foreground backdrop-blur transition-colors hover:bg-accent"
               >
-                freeCodeCamp certificate (PDF)
-              </a>
+                Get in touch
+              </Link>
             </div>
           </div>
+          <div className="order-first md:order-last">
+            <img
+              src={portrait.url}
+              alt="Portrait of Dorah Seroto, software developer"
+              className="h-40 w-40 rounded-2xl border border-border object-cover object-top shadow-elevated md:h-52 md:w-52"
+            />
+          </div>
         </div>
       </section>
 
-      <footer className="border-t border-border px-6 py-8 text-center text-sm text-muted-foreground">
-        © {new Date().getFullYear()} Dorah Motsatsi Seroto
-      </footer>
-    </main>
+      <section className="border-t border-border/60 px-6 py-20">
+        <div className="mx-auto max-w-5xl">
+          <h2 className="text-2xl font-semibold tracking-tight text-foreground md:text-3xl">
+            Explore my CV
+          </h2>
+          <p className="mt-3 max-w-xl text-muted-foreground">
+            Every part of my CV lives on its own page — click through to read more.
+          </p>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {cards.map((c) => (
+              <SectionCard key={c.to} {...c} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-border/60 bg-warm px-6 py-20">
+        <div className="mx-auto max-w-5xl">
+          <div className="grid gap-8 md:grid-cols-3">
+            {pillars.map(({ title, description, Icon }) => (
+              <div key={title} className="flex flex-col rounded-2xl bg-card p-6 shadow-sm">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-secondary">
+                  <Icon className="h-5 w-5 text-foreground" />
+                </div>
+                <h2 className="mt-5 text-lg font-semibold text-card-foreground">{title}</h2>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 py-20">
+        <div className="mx-auto max-w-5xl text-center">
+          <h2 className="text-2xl font-semibold tracking-tight text-foreground md:text-3xl">
+            Have a project in mind?
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
+            I'm currently open to freelance work and new opportunities. Let's talk about how I can
+            help.
+          </p>
+          <Link
+            to="/contact"
+            className="mt-8 inline-flex items-center justify-center rounded-full border border-border bg-background px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+          >
+            Start a conversation
+          </Link>
+        </div>
+      </section>
+    </div>
   );
 }
