@@ -66,10 +66,10 @@ function Education() {
         <div className="mt-10 rounded-2xl border border-border bg-card p-6 shadow-sm">
           <h2 className="text-lg font-semibold text-card-foreground">Chemical Engineering</h2>
           <p className="mt-1 text-sm text-muted-foreground">
-            Cape Peninsula University of Technology · Studied
+            Cape Peninsula University of Technology
           </p>
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-            Engineering studies built my analytical thinking, mathematical problem solving and
+            Chemical engineering studies built my analytical thinking, mathematical problem solving and
             technical documentation skills — the same discipline I now apply to writing software.
           </p>
         </div>
