@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Award } from "lucide-react";
 import certAsset from "@/assets/certificate.pdf.asset.json";
+import sheCodesAsset from "@/assets/shecodes-certificate.jpg.asset.json";
 
 export const Route = createFileRoute("/certificates")({
   head: () => ({
@@ -9,7 +10,7 @@ export const Route = createFileRoute("/certificates")({
       {
         name: "description",
         content:
-          "Certificates earned by Dorah Seroto, including the freeCodeCamp Responsive Web Design Developer Certification.",
+          "Certificates earned by Dorah Seroto, including freeCodeCamp Responsive Web Design and SheCodes Basics.",
       },
       { property: "og:title", content: "Certificates — Dorah Seroto" },
       {
@@ -18,7 +19,9 @@ export const Route = createFileRoute("/certificates")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:url", content: "/certificates" },
     ],
+    links: [{ rel: "canonical", href: "/certificates" }],
   }),
   component: Certificates,
 });
@@ -55,6 +58,33 @@ function Certificates() {
             </p>
             <span className="mt-4 text-sm font-medium text-tech">Open certificate (PDF)</span>
           </a>
+
+          <a
+            href={sheCodesAsset.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-tech/50 hover:shadow-elevated"
+          >
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-secondary transition-colors group-hover:bg-foreground">
+              <Award className="h-5 w-5 text-foreground transition-colors group-hover:text-background" />
+            </div>
+            <h2 className="mt-5 text-lg font-semibold text-card-foreground">
+              SheCodes Basics — Introduction to Coding
+            </h2>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Verified Certificate of Achievement, 11 August 2026
+            </p>
+            <span className="mt-4 text-sm font-medium text-tech">Open certificate</span>
+          </a>
+        </div>
+
+        <div className="mt-10 overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
+          <img
+            src={sheCodesAsset.url}
+            alt="SheCodes Basics certificate of achievement awarded to Dorah Seroto for Introduction to Coding"
+            className="w-full"
+            loading="lazy"
+          />
         </div>
 
         <Link

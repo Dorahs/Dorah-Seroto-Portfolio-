@@ -15,9 +15,11 @@ export const Route = createFileRoute("/contact")({
         property: "og:description",
         content: "Get in touch with Dorah Seroto, software developer in Limpopo, South Africa.",
       },
+      { property: "og:url", content: "/contact" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/contact" }],
   }),
   component: Contact,
 });

@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Award, Download, GraduationCap, Mail, Wrench } from "lucide-react";
-import cvAsset from "@/assets/cv.docx.asset.json";
+import cvAsset from "@/assets/cv.pdf.asset.json";
 import { SectionCard } from "@/components/SectionCard";
 
 export const Route = createFileRoute("/about")({
@@ -17,9 +17,11 @@ export const Route = createFileRoute("/about")({
         property: "og:description",
         content: "Background, professional summary and CV download for Dorah Motsatsi Seroto.",
       },
+      { property: "og:url", content: "/about" },
       { property: "og:type", content: "profile" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/about" }],
   }),
   component: About,
 });
@@ -66,7 +68,7 @@ function About() {
             className="mt-10 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-elevated transition-colors hover:bg-primary/90"
           >
             <Download className="h-4 w-4" />
-            Download my CV
+            Download my CV (PDF)
           </a>
         </div>
       </section>

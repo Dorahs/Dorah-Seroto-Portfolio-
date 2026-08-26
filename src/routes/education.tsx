@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import certAsset from "@/assets/certificate.pdf.asset.json";
+import sheCodesAsset from "@/assets/shecodes-certificate.jpg.asset.json";
 
 export const Route = createFileRoute("/education")({
   head: () => ({
@@ -8,7 +9,7 @@ export const Route = createFileRoute("/education")({
       {
         name: "description",
         content:
-          "Education and training of Dorah Seroto: Chemical Engineering at CPUT, WeThinkCode_, SheCodes Foundation, FNB App Academy and freeCodeCamp.",
+          "Education and training of Dorah Seroto: Chemical Engineering studies at CPUT, WeThinkCode_, SheCodes Foundation, FNB App Academy and freeCodeCamp.",
       },
       { property: "og:title", content: "Education & Training — Dorah Seroto" },
       {
@@ -17,7 +18,9 @@ export const Route = createFileRoute("/education")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:url", content: "/education" },
     ],
+    links: [{ rel: "canonical", href: "/education" }],
   }),
   component: Education,
 });
@@ -39,6 +42,8 @@ const training = [
     org: "SheCodes Foundation",
     period: "2026",
     detail: "Introduction to Coding — HTML, CSS, JavaScript and AI fundamentals.",
+    href: sheCodesAsset.url,
+    cta: "View certificate",
   },
   {
     org: "FNB App Academy",
@@ -64,7 +69,7 @@ function Education() {
             Cape Peninsula University of Technology
           </p>
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-            Engineering studies built my analytical thinking, mathematical problem solving and
+            Chemical engineering studies built my analytical thinking, mathematical problem solving and
             technical documentation skills — the same discipline I now apply to writing software.
           </p>
         </div>

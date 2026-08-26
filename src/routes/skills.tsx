@@ -14,9 +14,11 @@ export const Route = createFileRoute("/skills")({
         property: "og:description",
         content: "Languages, frameworks, tools and professional strengths of Dorah Seroto.",
       },
+      { property: "og:url", content: "/skills" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/skills" }],
   }),
   component: Skills,
 });

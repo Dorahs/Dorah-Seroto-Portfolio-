@@ -18,9 +18,11 @@ export const Route = createFileRoute("/")({
         content:
           "Portfolio of Dorah Seroto, a Python and software developer building clean, reliable, and scalable applications.",
       },
+      { property: "og:url", content: "/" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/" }],
   }),
   component: Home,
 });
