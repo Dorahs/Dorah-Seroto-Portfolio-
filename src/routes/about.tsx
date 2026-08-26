@@ -17,9 +17,11 @@ export const Route = createFileRoute("/about")({
         property: "og:description",
         content: "Background, professional summary and CV download for Dorah Motsatsi Seroto.",
       },
+      { property: "og:url", content: "/about" },
       { property: "og:type", content: "profile" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/about" }],
   }),
   component: About,
 });

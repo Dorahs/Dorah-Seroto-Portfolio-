@@ -14,9 +14,11 @@ export const Route = createFileRoute("/work")({
         property: "og:description",
         content: "Selected software projects by Dorah Seroto using JavaScript, React and Python.",
       },
+      { property: "og:url", content: "/work" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/work" }],
   }),
   component: Work,
 });
