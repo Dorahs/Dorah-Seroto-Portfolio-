@@ -4,8 +4,7 @@ https://my-stellar-showcase-26.lovable.app
 
 
 
-Add my cv and certificate. Remove the old one. And don't specify if I graduated or not at cput for chemical engineering
-
+ 
 This project was built with [Lovable](https://lovable.dev).
 
 **Live app**: https://stellar-portfoli-kit.lovable.app
