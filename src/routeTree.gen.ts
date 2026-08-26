@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as CertificatesRouteImport } from './routes/certificates'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as DocumentsRouteImport } from './routes/documents'
 import { Route as EducationRouteImport } from './routes/education'
 import { Route as SkillsRouteImport } from './routes/skills'
 import { Route as WorkRouteImport } from './routes/work'
@@ -37,6 +38,11 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DocumentsRoute = DocumentsRouteImport.update({
+  id: '/documents',
+  path: '/documents',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EducationRoute = EducationRouteImport.update({
   id: '/education',
   path: '/education',
@@ -58,6 +64,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/certificates': typeof CertificatesRoute
   '/contact': typeof ContactRoute
+  '/documents': typeof DocumentsRoute
   '/education': typeof EducationRoute
   '/skills': typeof SkillsRoute
   '/work': typeof WorkRoute
@@ -67,6 +74,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/certificates': typeof CertificatesRoute
   '/contact': typeof ContactRoute
+  '/documents': typeof DocumentsRoute
   '/education': typeof EducationRoute
   '/skills': typeof SkillsRoute
   '/work': typeof WorkRoute
@@ -77,6 +85,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/certificates': typeof CertificatesRoute
   '/contact': typeof ContactRoute
+  '/documents': typeof DocumentsRoute
   '/education': typeof EducationRoute
   '/skills': typeof SkillsRoute
   '/work': typeof WorkRoute
@@ -88,6 +97,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/certificates'
     | '/contact'
+    | '/documents'
     | '/education'
     | '/skills'
     | '/work'
@@ -97,6 +107,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/certificates'
     | '/contact'
+    | '/documents'
     | '/education'
     | '/skills'
     | '/work'
@@ -106,6 +117,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/certificates'
     | '/contact'
+    | '/documents'
     | '/education'
     | '/skills'
     | '/work'
@@ -116,6 +128,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   CertificatesRoute: typeof CertificatesRoute
   ContactRoute: typeof ContactRoute
+  DocumentsRoute: typeof DocumentsRoute
   EducationRoute: typeof EducationRoute
   SkillsRoute: typeof SkillsRoute
   WorkRoute: typeof WorkRoute
@@ -151,6 +164,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/documents': {
+      id: '/documents'
+      path: '/documents'
+      fullPath: '/documents'
+      preLoaderRoute: typeof DocumentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/education': {
       id: '/education'
       path: '/education'
@@ -180,6 +200,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   CertificatesRoute: CertificatesRoute,
   ContactRoute: ContactRoute,
+  DocumentsRoute: DocumentsRoute,
   EducationRoute: EducationRoute,
   SkillsRoute: SkillsRoute,
   WorkRoute: WorkRoute,
