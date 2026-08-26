@@ -1,14 +1,22 @@
-# Welcome to your Lovable project
+# My Professional Hub
+
+https://my-stellar-showcase-26.lovable.app
+
+
+
+Add my cv and certificate. Remove the old one. And don't specify if I graduated or not at cput for chemical engineering
 
 This project was built with [Lovable](https://lovable.dev).
 
+**Live app**: https://stellar-portfoli-kit.lovable.app
+
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/7c0f9cb6-19cf-4c9b-a9e9-57234b23db94).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +28,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
