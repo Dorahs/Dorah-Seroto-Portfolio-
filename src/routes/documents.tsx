@@ -3,6 +3,7 @@ import { Download, FileText, Award } from "lucide-react";
 import cvAsset from "@/assets/cv.pdf.asset.json";
 import certAsset from "@/assets/certificate.pdf.asset.json";
 import sheCodesAsset from "@/assets/shecodes-certificate.jpg.asset.json";
+import weThinkCodeAsset from "@/assets/wethinkcode-genai-certificate.pdf.asset.json";
 
 export const Route = createFileRoute("/documents")({
   head: () => ({
@@ -41,6 +42,14 @@ const items = [
     title: "freeCodeCamp — Responsive Web Design",
     detail: "Developer Certification, approximately 300 hours.",
     href: certAsset.url,
+    cta: "Open certificate (PDF)",
+    download: false,
+  },
+  {
+    icon: Award,
+    title: "WeThinkCode_ — GenAI Course for Software Engineers",
+    detail: "Certificate of Completion, 29 May 2026.",
+    href: weThinkCodeAsset.url,
     cta: "Open certificate (PDF)",
     download: false,
   },

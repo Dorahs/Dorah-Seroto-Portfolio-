@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import certAsset from "@/assets/certificate.pdf.asset.json";
 import sheCodesAsset from "@/assets/shecodes-certificate.jpg.asset.json";
+import weThinkCodeAsset from "@/assets/wethinkcode-genai-certificate.pdf.asset.json";
 
 export const Route = createFileRoute("/education")({
   head: () => ({
@@ -37,6 +38,8 @@ const training = [
     org: "WeThinkCode_",
     period: "2026",
     detail: "GenAI Course for Software Engineers — completed May 2026.",
+    href: weThinkCodeAsset.url,
+    cta: "View certificate",
   },
   {
     org: "SheCodes Foundation",

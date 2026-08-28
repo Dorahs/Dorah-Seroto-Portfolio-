@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Award } from "lucide-react";
 import certAsset from "@/assets/certificate.pdf.asset.json";
 import sheCodesAsset from "@/assets/shecodes-certificate.jpg.asset.json";
+import weThinkCodeAsset from "@/assets/wethinkcode-genai-certificate.pdf.asset.json";
 
 export const Route = createFileRoute("/certificates")({
   head: () => ({
@@ -40,7 +41,7 @@ function Certificates() {
           Click a certificate to open the original document.
         </p>
 
-        <div className="mt-10 grid gap-6 sm:grid-cols-2">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <a
             href={certAsset.url}
             target="_blank"
@@ -55,6 +56,24 @@ function Certificates() {
             </h2>
             <p className="mt-2 text-sm text-muted-foreground">
               Developer Certification, 22 August 2026 · approximately 300 hours
+            </p>
+            <span className="mt-4 text-sm font-medium text-tech">Open certificate (PDF)</span>
+          </a>
+
+          <a
+            href={weThinkCodeAsset.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-tech/50 hover:shadow-elevated"
+          >
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-secondary transition-colors group-hover:bg-foreground">
+              <Award className="h-5 w-5 text-foreground transition-colors group-hover:text-background" />
+            </div>
+            <h2 className="mt-5 text-lg font-semibold text-card-foreground">
+              WeThinkCode_ — GenAI Course for Software Engineers
+            </h2>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Certificate of Completion, 29 May 2026
             </p>
             <span className="mt-4 text-sm font-medium text-tech">Open certificate (PDF)</span>
           </a>
