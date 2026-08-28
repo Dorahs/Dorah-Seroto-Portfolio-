@@ -47,6 +47,14 @@ const items = [
   },
   {
     icon: Award,
+    title: "WeThinkCode_ — GenAI Course for Software Engineers",
+    detail: "Certificate of Completion, 29 May 2026.",
+    href: weThinkCodeAsset.url,
+    cta: "Open certificate (PDF)",
+    download: false,
+  },
+  {
+    icon: Award,
     title: "SheCodes Basics — Introduction to Coding",
     detail: "Verified Certificate of Achievement, 11 August 2026.",
     href: sheCodesAsset.url,

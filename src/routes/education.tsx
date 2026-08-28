@@ -38,6 +38,8 @@ const training = [
     org: "WeThinkCode_",
     period: "2026",
     detail: "GenAI Course for Software Engineers — completed May 2026.",
+    href: weThinkCodeAsset.url,
+    cta: "View certificate",
   },
   {
     org: "SheCodes Foundation",
