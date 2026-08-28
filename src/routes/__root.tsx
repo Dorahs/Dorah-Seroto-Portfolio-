@@ -118,6 +118,12 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
+        <script
+          // Apply saved theme, otherwise follow the device's light/dark setting — and keep following it live.
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var d=document.documentElement;function system(){return window.matchMedia("(prefers-color-scheme: dark)").matches}function apply(){var s=null;try{s=localStorage.getItem("theme")}catch(e){}d.classList.toggle("dark",s?s==="dark":system())}apply();try{window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",function(){var s=null;try{s=localStorage.getItem("theme")}catch(e){}if(!s)apply()})}catch(e){}})();`,
+          }}
+        />
         <HeadContent />
       </head>
       <body>
