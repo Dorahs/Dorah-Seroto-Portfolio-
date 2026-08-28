@@ -6,17 +6,17 @@ import { SectionCard } from "@/components/SectionCard";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Dorah Seroto — Python & Software Developer" },
+      { title: "Dorah Seroto — Software Developer | Python · React · JavaScript" },
       {
         name: "description",
         content:
-          "Portfolio of Dorah Seroto, a Python and software developer building clean, reliable, and scalable applications.",
+          "Self-taught Software Developer skilled in Python, JavaScript, React, HTML and CSS, seeking an entry-level software development opportunity.",
       },
-      { property: "og:title", content: "Dorah Seroto — Python & Software Developer" },
+      { property: "og:title", content: "Dorah Seroto — Software Developer | Python · React · JavaScript" },
       {
         property: "og:description",
         content:
-          "Portfolio of Dorah Seroto, a Python and software developer building clean, reliable, and scalable applications.",
+          "Self-taught Software Developer skilled in Python, JavaScript, React, HTML and CSS, seeking an entry-level software development opportunity.",
       },
       { property: "og:url", content: "/" },
       { property: "og:type", content: "website" },
@@ -67,14 +67,16 @@ function Home() {
           <div>
             <p className="inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-3 py-1 text-xs font-medium uppercase tracking-widest text-muted-foreground backdrop-blur">
               <span className="h-1.5 w-1.5 rounded-full bg-tech-glow" />
-              Python &amp; Software Developer
+              Software Developer
             </p>
             <h1 className="mt-6 max-w-3xl text-4xl font-semibold leading-tight tracking-tight text-foreground md:text-5xl lg:text-6xl">
-              Building thoughtful software with Python.
+              Software Developer | Python · React · JavaScript
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              I'm Dorah Seroto, a developer who loves turning ideas into clean, reliable code. I
-              specialize in Python backends, data workflows, and tools that just work.
+              I'm Dorah Seroto, a self-taught Software Developer skilled in Python, JavaScript,
+              React, HTML and CSS, with hands-on experience using Git and GitHub. I build
+              responsive, user-focused applications and I'm seeking an entry-level software
+              development opportunity.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Link
