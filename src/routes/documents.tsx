@@ -3,6 +3,7 @@ import { Download, FileText, Award } from "lucide-react";
 import cvAsset from "@/assets/cv.pdf.asset.json";
 import certAsset from "@/assets/certificate.pdf.asset.json";
 import sheCodesAsset from "@/assets/shecodes-certificate.jpg.asset.json";
+import weThinkCodeAsset from "@/assets/wethinkcode-genai-certificate.pdf.asset.json";
 
 export const Route = createFileRoute("/documents")({
   head: () => ({
