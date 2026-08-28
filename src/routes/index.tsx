@@ -6,17 +6,17 @@ import { SectionCard } from "@/components/SectionCard";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Dorah Seroto — Python & Software Developer" },
+      { title: "Dorah Seroto — Software Developer | Python · React · JavaScript" },
       {
         name: "description",
         content:
-          "Portfolio of Dorah Seroto, a Python and software developer building clean, reliable, and scalable applications.",
+          "Self-taught Software Developer skilled in Python, JavaScript, React, HTML and CSS, seeking an entry-level software development opportunity.",
       },
-      { property: "og:title", content: "Dorah Seroto — Python & Software Developer" },
+      { property: "og:title", content: "Dorah Seroto — Software Developer | Python · React · JavaScript" },
       {
         property: "og:description",
         content:
-          "Portfolio of Dorah Seroto, a Python and software developer building clean, reliable, and scalable applications.",
+          "Self-taught Software Developer skilled in Python, JavaScript, React, HTML and CSS, seeking an entry-level software development opportunity.",
       },
       { property: "og:url", content: "/" },
       { property: "og:type", content: "website" },
