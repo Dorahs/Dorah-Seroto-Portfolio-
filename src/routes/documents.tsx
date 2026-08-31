@@ -100,14 +100,6 @@ function Documents() {
           ))}
         </div>
 
-        <div className="mt-12 overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
-          <img
-            src={sheCodesAsset.url}
-            alt="SheCodes Basics certificate of achievement awarded to Dorah Seroto for Introduction to Coding"
-            className="w-full"
-            loading="lazy"
-          />
-        </div>
       </div>
     </section>
   );
