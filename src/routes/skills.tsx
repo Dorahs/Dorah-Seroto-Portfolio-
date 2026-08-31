@@ -14,11 +14,11 @@ export const Route = createFileRoute("/skills")({
         property: "og:description",
         content: "Languages, frameworks, tools and professional strengths of Dorah Seroto.",
       },
-      { property: "og:url", content: "/skills" },
+      { property: "og:url", content: "https://stellar-portfoli-kit.lovable.app/skills" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/skills" }],
+    links: [{ rel: "canonical", href: "https://stellar-portfoli-kit.lovable.app/skills" }],
   }),
   component: Skills,
 });

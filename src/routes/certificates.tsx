@@ -20,9 +20,9 @@ export const Route = createFileRoute("/certificates")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:url", content: "/certificates" },
+      { property: "og:url", content: "https://stellar-portfoli-kit.lovable.app/certificates" },
     ],
-    links: [{ rel: "canonical", href: "/certificates" }],
+    links: [{ rel: "canonical", href: "https://stellar-portfoli-kit.lovable.app/certificates" }],
   }),
   component: Certificates,
 });

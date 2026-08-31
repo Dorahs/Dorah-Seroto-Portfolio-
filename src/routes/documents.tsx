@@ -20,10 +20,10 @@ export const Route = createFileRoute("/documents")({
         content: "Download the CV and open the original certificate documents.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/documents" },
+      { property: "og:url", content: "https://stellar-portfoli-kit.lovable.app/documents" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/documents" }],
+    links: [{ rel: "canonical", href: "https://stellar-portfoli-kit.lovable.app/documents" }],
   }),
   component: Documents,
 });
