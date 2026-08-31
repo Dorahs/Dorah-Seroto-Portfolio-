@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>/</loc></url>
-  <url><loc>/about</loc></url>
-  <url><loc>/skills</loc></url>
-  <url><loc>/education</loc></url>
-  <url><loc>/certificates</loc></url>
-  <url><loc>/documents</loc></url>
-  <url><loc>/work</loc></url>
-  <url><loc>/contact</loc></url>
+  <url><loc>https://stellar-portfoli-kit.lovable.app/</loc></url>
+  <url><loc>https://stellar-portfoli-kit.lovable.app/about</loc></url>
+  <url><loc>https://stellar-portfoli-kit.lovable.app/skills</loc></url>
+  <url><loc>https://stellar-portfoli-kit.lovable.app/education</loc></url>
+  <url><loc>https://stellar-portfoli-kit.lovable.app/certificates</loc></url>
+  <url><loc>https://stellar-portfoli-kit.lovable.app/documents</loc></url>
+  <url><loc>https://stellar-portfoli-kit.lovable.app/work</loc></url>
+  <url><loc>https://stellar-portfoli-kit.lovable.app/contact</loc></url>
 </urlset>

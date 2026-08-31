@@ -18,11 +18,11 @@ export const Route = createFileRoute("/")({
         content:
           "Self-taught Software Developer skilled in Python, JavaScript, React, HTML and CSS, seeking an entry-level software development opportunity.",
       },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://stellar-portfoli-kit.lovable.app/" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://stellar-portfoli-kit.lovable.app/" }],
   }),
   component: Home,
 });

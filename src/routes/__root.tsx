@@ -91,8 +91,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content: "Portfolio of Dorah Motsatsi Seroto, software developer (Python, JavaScript, React).",
       },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Dorah Seroto" },
+      { property: "og:locale", content: "en_ZA" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "robots", content: "index, follow" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Dorah Motsatsi Seroto",
+          jobTitle: "Software Developer",
+          url: "https://stellar-portfoli-kit.lovable.app/",
+          knowsAbout: ["Python", "JavaScript", "TypeScript", "React", "HTML", "CSS", "Git"],
+        }),
+      },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },

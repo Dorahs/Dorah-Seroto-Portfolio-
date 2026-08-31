@@ -15,11 +15,11 @@ export const Route = createFileRoute("/contact")({
         property: "og:description",
         content: "Get in touch with Dorah Seroto, software developer in Limpopo, South Africa.",
       },
-      { property: "og:url", content: "/contact" },
+      { property: "og:url", content: "https://stellar-portfoli-kit.lovable.app/contact" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/contact" }],
+    links: [{ rel: "canonical", href: "https://stellar-portfoli-kit.lovable.app/contact" }],
   }),
   component: Contact,
 });

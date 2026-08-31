@@ -20,10 +20,10 @@ export const Route = createFileRoute("/documents")({
         content: "Download the CV and open the original certificate documents.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/documents" },
+      { property: "og:url", content: "https://stellar-portfoli-kit.lovable.app/documents" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/documents" }],
+    links: [{ rel: "canonical", href: "https://stellar-portfoli-kit.lovable.app/documents" }],
   }),
   component: Documents,
 });
@@ -100,14 +100,6 @@ function Documents() {
           ))}
         </div>
 
-        <div className="mt-12 overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
-          <img
-            src={sheCodesAsset.url}
-            alt="SheCodes Basics certificate of achievement awarded to Dorah Seroto for Introduction to Coding"
-            className="w-full"
-            loading="lazy"
-          />
-        </div>
       </div>
     </section>
   );

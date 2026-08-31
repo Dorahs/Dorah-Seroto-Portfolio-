@@ -19,9 +19,9 @@ export const Route = createFileRoute("/education")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:url", content: "/education" },
+      { property: "og:url", content: "https://stellar-portfoli-kit.lovable.app/education" },
     ],
-    links: [{ rel: "canonical", href: "/education" }],
+    links: [{ rel: "canonical", href: "https://stellar-portfoli-kit.lovable.app/education" }],
   }),
   component: Education,
 });

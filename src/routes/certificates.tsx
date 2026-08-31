@@ -20,9 +20,9 @@ export const Route = createFileRoute("/certificates")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:url", content: "/certificates" },
+      { property: "og:url", content: "https://stellar-portfoli-kit.lovable.app/certificates" },
     ],
-    links: [{ rel: "canonical", href: "/certificates" }],
+    links: [{ rel: "canonical", href: "https://stellar-portfoli-kit.lovable.app/certificates" }],
   }),
   component: Certificates,
 });
@@ -97,14 +97,6 @@ function Certificates() {
           </a>
         </div>
 
-        <div className="mt-10 overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
-          <img
-            src={sheCodesAsset.url}
-            alt="SheCodes Basics certificate of achievement awarded to Dorah Seroto for Introduction to Coding"
-            className="w-full"
-            loading="lazy"
-          />
-        </div>
 
         <Link
           to="/contact"
