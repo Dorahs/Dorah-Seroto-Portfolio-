@@ -105,7 +105,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           name: "Dorah Motsatsi Seroto",
           jobTitle: "Software Developer",
           url: "https://stellar-portfoli-kit.lovable.app/",
-          knowsAbout: ["Python", "JavaScript", "TypeScript", "React", "HTML", "CSS", "Git"],
+          knowsAbout: ["Python", "JavaScript", "React", "HTML", "CSS", "Git"],
         }),
       },
     ],
