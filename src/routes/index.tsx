@@ -29,7 +29,7 @@ export const Route = createFileRoute("/")({
 
 const cards = [
   { to: "/about", title: "About me", description: "My background, summary and CV download.", Icon: CodeXml },
-  { to: "/skills", title: "Skills", description: "Python, JavaScript, TypeScript, React, Git and more.", Icon: Wrench },
+  { to: "/skills", title: "Skills", description: "Python, JavaScript, React, Git and more.", Icon: Wrench },
   {
     to: "/education",
     title: "Education",
@@ -49,7 +49,7 @@ const pillars = [
     title: "Clean Code",
     description: "Readable, maintainable Python and software crafted with care.",
     Icon: CodeXml,
-    skills: ["Python", "JavaScript", "TypeScript", "React", "HTML", "CSS", "Git"],
+    skills: ["Python", "JavaScript", "React", "HTML", "CSS", "Git"],
   },
   {
     title: "Data & APIs",
