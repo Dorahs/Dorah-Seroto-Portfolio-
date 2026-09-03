@@ -45,12 +45,23 @@ const cards = [
 ];
 
 const pillars = [
-  { title: "Clean Code", description: "Readable, maintainable Python and software crafted with care.", Icon: CodeXml },
-  { title: "Data & APIs", description: "From RESTful APIs to data pipelines and backend services.", Icon: Database },
+  {
+    title: "Clean Code",
+    description: "Readable, maintainable Python and software crafted with care.",
+    Icon: CodeXml,
+    skills: ["Python", "JavaScript", "TypeScript", "React", "HTML", "CSS", "Git"],
+  },
+  {
+    title: "Data & APIs",
+    description: "From RESTful APIs to data pipelines and backend services.",
+    Icon: Database,
+    skills: ["REST APIs", "JSON", "DOM manipulation", "Data fetching", "Backend services"],
+  },
   {
     title: "Problem Solver",
     description: "Turning complex requirements into simple, working solutions.",
     Icon: Terminal,
+    skills: ["Debugging", "Requirements breakdown", "Responsive design", "User-focused apps"],
   },
 ];
 
@@ -123,15 +134,34 @@ function Home() {
       <section className="border-t border-border/60 bg-warm px-6 py-20">
         <div className="mx-auto max-w-5xl">
           <div className="grid gap-8 md:grid-cols-3">
-            {pillars.map(({ title, description, Icon }) => (
+            {pillars.map(({ title, description, Icon, skills }) => (
               <div key={title} className="flex flex-col rounded-2xl bg-card p-6 shadow-sm">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-secondary">
                   <Icon className="h-5 w-5 text-foreground" />
                 </div>
                 <h2 className="mt-5 text-lg font-semibold text-card-foreground">{title}</h2>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{description}</p>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="rounded-full bg-secondary px-3 py-1 text-xs text-secondary-foreground"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
             ))}
+          </div>
+          <div className="mt-12 text-center">
+            <Link
+              to="/work"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-elevated transition-colors hover:bg-primary/90"
+            >
+              See these skills in action
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </section>
