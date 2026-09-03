@@ -7,7 +7,7 @@ export const Route = createFileRoute("/skills")({
       {
         name: "description",
         content:
-          "Technical skills of Dorah Seroto: Python, JavaScript, TypeScript, React, Git, GitHub and responsive web development.",
+          "Technical skills of Dorah Seroto: Python, JavaScript, React, Git, GitHub and responsive web development.",
       },
       { property: "og:title", content: "Skills — Dorah Seroto" },
       {
