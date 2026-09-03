@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ArrowUpRight, Github } from "lucide-react";
 
 export const Route = createFileRoute("/work")({
   head: () => ({
