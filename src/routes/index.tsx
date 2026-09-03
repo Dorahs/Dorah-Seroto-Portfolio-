@@ -45,12 +45,23 @@ const cards = [
 ];
 
 const pillars = [
-  { title: "Clean Code", description: "Readable, maintainable Python and software crafted with care.", Icon: CodeXml },
-  { title: "Data & APIs", description: "From RESTful APIs to data pipelines and backend services.", Icon: Database },
+  {
+    title: "Clean Code",
+    description: "Readable, maintainable Python and software crafted with care.",
+    Icon: CodeXml,
+    skills: ["Python", "JavaScript", "TypeScript", "React", "HTML", "CSS", "Git"],
+  },
+  {
+    title: "Data & APIs",
+    description: "From RESTful APIs to data pipelines and backend services.",
+    Icon: Database,
+    skills: ["REST APIs", "JSON", "DOM manipulation", "Data fetching", "Backend services"],
+  },
   {
     title: "Problem Solver",
     description: "Turning complex requirements into simple, working solutions.",
     Icon: Terminal,
+    skills: ["Debugging", "Requirements breakdown", "Responsive design", "User-focused apps"],
   },
 ];
 
