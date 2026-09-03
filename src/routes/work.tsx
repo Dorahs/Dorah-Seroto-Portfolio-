@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ArrowUpRight, Github } from "lucide-react";
 
 export const Route = createFileRoute("/work")({
   head: () => ({
@@ -44,6 +45,27 @@ const projects = [
   },
 ];
 
+const githubRepos = [
+  {
+    name: "Calculator",
+    description: "A calculator web app with a clean, responsive interface.",
+    language: "CSS",
+    url: "https://github.com/Dorahs/Calculator",
+  },
+  {
+    name: "weather-predictor",
+    description: "A weather predictor app fetching real-time weather data.",
+    language: "CSS",
+    url: "https://github.com/Dorahs/weather-predictor",
+  },
+  {
+    name: "Dorah-Seroto-Portfolio-",
+    description: "The source code for this personal portfolio website.",
+    language: "TypeScript",
+    url: "https://github.com/Dorahs/Dorah-Seroto-Portfolio-",
+  },
+];
+
 function Work() {
   return (
     <section className="px-6 py-16 md:py-20">
@@ -73,6 +95,38 @@ function Work() {
               </ul>
             </article>
           ))}
+        </div>
+
+        <div className="mt-16">
+          <div className="flex items-center gap-3">
+            <Github className="h-5 w-5 text-foreground" />
+            <h2 className="text-2xl font-semibold tracking-tight text-foreground">
+              On GitHub
+            </h2>
+          </div>
+          <p className="mt-3 max-w-2xl text-muted-foreground">
+            Public repositories from my GitHub profile.
+          </p>
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {githubRepos.map((r) => (
+              <a
+                key={r.name}
+                href={r.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-tech/50 hover:shadow-elevated"
+              >
+                <div className="flex items-center justify-between">
+                  <h3 className="text-lg font-semibold text-card-foreground">{r.name}</h3>
+                  <ArrowUpRight className="h-5 w-5 text-muted-foreground transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-foreground" />
+                </div>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{r.description}</p>
+                <span className="mt-5 inline-flex w-fit items-center rounded-full bg-secondary px-3 py-1 text-xs text-secondary-foreground">
+                  {r.language}
+                </span>
+              </a>
+            ))}
+          </div>
         </div>
 
         <p className="mt-8 text-sm text-muted-foreground">
