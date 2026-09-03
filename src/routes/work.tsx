@@ -45,6 +45,27 @@ const projects = [
   },
 ];
 
+const githubRepos = [
+  {
+    name: "Calculator",
+    description: "A calculator web app with a clean, responsive interface.",
+    language: "CSS",
+    url: "https://github.com/Dorahs/Calculator",
+  },
+  {
+    name: "weather-predictor",
+    description: "A weather predictor app fetching real-time weather data.",
+    language: "CSS",
+    url: "https://github.com/Dorahs/weather-predictor",
+  },
+  {
+    name: "Dorah-Seroto-Portfolio-",
+    description: "The source code for this personal portfolio website.",
+    language: "TypeScript",
+    url: "https://github.com/Dorahs/Dorah-Seroto-Portfolio-",
+  },
+];
+
 function Work() {
   return (
     <section className="px-6 py-16 md:py-20">
