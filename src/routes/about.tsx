@@ -27,7 +27,7 @@ export const Route = createFileRoute("/about")({
 });
 
 const cards = [
-  { to: "/skills", title: "Skills", description: "Python, JavaScript, React, Git and responsive web development.", Icon: Wrench },
+  { to: "/skills", title: "Skills", description: "Python, JavaScript, TypeScript, React, Git and responsive web development.", Icon: Wrench },
   { to: "/education", title: "Education & training", description: "Chemical Engineering at CPUT, WeThinkCode_, SheCodes, FNB App Academy.", Icon: GraduationCap },
   { to: "/certificates", title: "Certificates", description: "freeCodeCamp Responsive Web Design certification, viewable in full.", Icon: Award },
   { to: "/contact", title: "Contact", description: "Email, WhatsApp, phone, GitHub and LinkedIn — all one click away.", Icon: Mail },
